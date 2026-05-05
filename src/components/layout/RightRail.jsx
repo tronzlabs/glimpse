@@ -4,6 +4,7 @@ import { useApp } from "../../store/useApp";
 import { Avatar } from "../ui/Avatar";
 import { formatCount } from "../../lib/time";
 import { generateTrendingTopics } from "../../lib/mockData";
+import tronzlabsLogo from "../../assets/tronzlabs-logo.png";
 
 export function RightRail() {
   const users = useApp((s) => s.users);
@@ -79,7 +80,16 @@ export function RightRail() {
       </section>
 
       <footer className="px-1 pb-2 text-xs text-faint">
-        © {new Date().getFullYear()} Glimpse · Built for the love of feeds.
+        <div>© {new Date().getFullYear()} Glimpse · Built for the love of feeds.</div>
+        <div className="mt-1 normal-case tracking-normal">
+          Built by{" "}
+          <a href="https://tronzlabs.com" target="_blank" rel="noreferrer" className="font-medium text-base-strong hover:opacity-80">
+            <span className="text-base-strong">Tron</span>
+            <span className="text-red-500 underline underline-offset-2">z</span>
+            <span className="text-faint">labs</span>
+          </a>
+          <img src={tronzlabsLogo} alt="Tronzlabs logo" className="ml-1 inline h-4 w-4 object-contain" />
+        </div>
       </footer>
     </aside>
   );
