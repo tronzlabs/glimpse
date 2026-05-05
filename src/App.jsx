@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Profile from "./pages/Profile";
 import Notifications from "./pages/Notifications";
 import Explore from "./pages/Explore";
+import StartProjectOverlay from "./components/StartProjectOverlay";
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
           <Route path="*" element={<Home />} />
         </Route>
       </Routes>
+      <StartProjectOverlay />
     </BrowserRouter>
   );
 }
